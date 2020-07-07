@@ -6,13 +6,8 @@ public class Main {
         final Account a = new Account(1000);
         final Account b = new Account(2000);
 
-        new Thread(() -> {
-            transfer(a, b, 500);
-        }).start();
-
-        new Thread(() -> {
-            transfer(b, a, 300);
-        }).start();
+        new Thread(() -> transfer(a, b, 500)).start();
+        new Thread(() -> transfer(b, a, 300)).start();
     }
 
     static void transfer(Account from, Account to, int amount) {
