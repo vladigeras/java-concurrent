@@ -15,13 +15,13 @@ public class Main {
 
 	static void transfer(Account from, Account to, int amount) {
 		System.out.println(String.format("Transfering %d from %s to %s start in %s", amount, from, to, Thread.currentThread().getName()));
-		if (from.getBalance() < amount) {
-			throw new RuntimeException("Insufficient funds");
-		}
 
 		System.out.println(String.format("Before 1 lock %s", Thread.currentThread().getName()));
 		try {
 			if (from.getLock().tryLock(WAIT_SEC, TimeUnit.SECONDS)) {
+				if (from.getBalance() < amount) {
+					throw new RuntimeException("Insufficient funds");
+				}
 				System.out.println(String.format("After 1 lock %s", Thread.currentThread().getName()));
 
 				Thread.sleep(1000);
