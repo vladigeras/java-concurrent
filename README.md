@@ -6,3 +6,4 @@ Such as:
 - Lock solution
 - Atomic variables solution
 - Callable, Future, ExecutorService / ScheduledExecutorService usage
+- Semaphore usage

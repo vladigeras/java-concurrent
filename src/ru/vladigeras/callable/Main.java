@@ -18,8 +18,8 @@ public class Main {
 		}, 1L, 1L, TimeUnit.SECONDS);
 
 		ExecutorService executorService = Executors.newFixedThreadPool(3);
+		Random random = new Random();
 		for (int i = 0; i < 10; i++) {
-			Random random = new Random();
 			executorService.submit(new Transfer(a, b, random.nextInt(400)));
 		}
 
