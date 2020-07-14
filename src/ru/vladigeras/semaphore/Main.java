@@ -21,5 +21,7 @@ public class Main {
 		for (Future<Integer> task : tasks) {
 			System.out.println(String.format("Task return sum %d", task.get()));
 		}
+
+		executorService.shutdown();
 	}
 }

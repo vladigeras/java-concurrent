@@ -3,7 +3,7 @@ This project shows and describes basic concepts **Java Concurrency API** (java.u
 
 Such as:
 - Deadlock problem
-- Lock solution
+- Lock / ReadWriteLock solution
 - Atomic variables solution
 - Callable, Future, ExecutorService / ScheduledExecutorService usage
 - Semaphore usage
