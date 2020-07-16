@@ -8,3 +8,4 @@ Such as:
 - Callable, Future, ExecutorService / ScheduledExecutorService usage
 - Semaphore usage
 - CountDownLatch feature
+- CyclicBarrier feature
