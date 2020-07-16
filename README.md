@@ -9,3 +9,4 @@ Such as:
 - Semaphore usage
 - CountDownLatch feature
 - CyclicBarrier feature
+- ThreadLocal variables usage
