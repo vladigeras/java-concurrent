@@ -6,7 +6,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-public class Main {
+public class CallableMain {
 	public static void main(String[] args) throws InterruptedException {
 		final Account a = new Account(1000);
 		final Account b = new Account(2000);

@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.*;
 
-public class Main {
+public class SemaphoreMain {
 	public static void main(String[] args) throws ExecutionException, InterruptedException {
 		Semaphore semaphore = new Semaphore(3, true);
 

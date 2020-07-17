@@ -1,16 +1,16 @@
 package ru.vladigeras.deadlock;
 
-public class Main {
+public class DeadlockMain {
 
-    public static void main(String[] args) {
-        final Account a = new Account(1000);
-        final Account b = new Account(2000);
+	public static void main(String[] args) {
+		final Account a = new Account(1000);
+		final Account b = new Account(2000);
 
-        new Thread(() -> transfer(a, b, 500)).start();
-        new Thread(() -> transfer(b, a, 300)).start();
-    }
+		new Thread(() -> transfer(a, b, 500)).start();
+		new Thread(() -> transfer(b, a, 300)).start();
+	}
 
-    static void transfer(Account from, Account to, int amount) {
+	static void transfer(Account from, Account to, int amount) {
         System.out.println(String.format("Transfering %d from %s to %s start in %s", amount, from, to, Thread.currentThread().getName()));
         if (from.getBalance() < amount) {
             throw new RuntimeException("Insufficient funds");

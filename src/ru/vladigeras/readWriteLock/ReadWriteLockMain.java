@@ -1,6 +1,6 @@
 package ru.vladigeras.readWriteLock;
 
-public class Main {
+public class ReadWriteLockMain {
 	public static void main(String[] args) {
 		final Account a = new Account(1000);
 		final Account b = new Account(2000);

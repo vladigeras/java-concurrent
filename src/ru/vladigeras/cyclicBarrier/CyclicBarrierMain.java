@@ -8,7 +8,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-public class Main {
+public class CyclicBarrierMain {
 	public static void main(String[] args) {
 		int parties = 4;
 		CyclicBarrier barrier = new CyclicBarrier(parties);

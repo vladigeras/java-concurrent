@@ -1,8 +1,8 @@
-package ru.vladigeras.atomic;
+package ru.vladigeras.lock;
 
 import java.util.concurrent.TimeUnit;
 
-public class Main {
+public class LockMain {
 	private static final int WAIT_SEC = 1;
 
 	public static void main(String[] args) {
@@ -39,15 +39,13 @@ public class Main {
 						}
 					}
 				} catch (InterruptedException e) {
-					to.incFailedTransferCount();
-					System.out.println(String.format("Current failed transfer of account 2 is %s", to.getFailCount()));
+					e.printStackTrace();
 				} finally {
 					from.getLock().unlock();
 					System.out.println(String.format("Release 1 lock %s", Thread.currentThread().getName()));
 				}
 			} else {
-				from.incFailedTransferCount();
-				System.out.println(String.format("Current failed transfer of account 1 is %s", from.getFailCount()));
+				throw new RuntimeException("Error waiting lock");
 			}
 		} catch (InterruptedException e) {
 			e.printStackTrace();

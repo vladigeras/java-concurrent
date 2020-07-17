@@ -1,6 +1,6 @@
 package ru.vladigeras.threadLocal;
 
-public class Main {
+public class ThreadLocalMain {
 	public static void main(String[] args) {
 		try {
 			new Thread(() -> SecurityContextHolder.setCurrentUser(new User(1L, "Ivan"))).start();

@@ -9,7 +9,7 @@ import java.util.concurrent.*;
 /**
  * @author vladi_geras on 17.07.2020
  */
-public class Main {
+public class SyncVsCopyOnWriteMain {
 	public static void main(String[] args) {
 		List<Integer> synchronizedList = Collections.synchronizedList(new ArrayList<>());
 		List<Integer> copyOnWriteList = new CopyOnWriteArrayList<>();

@@ -11,4 +11,4 @@ Such as:
 - CyclicBarrier feature
 - ThreadLocal variables usage
 - CopyOnWrite* collection vs Synchronized collection performance
-- BlockingQueue and SynchronousQueue
+- BlockingQueue and SynchronousQueue usage
